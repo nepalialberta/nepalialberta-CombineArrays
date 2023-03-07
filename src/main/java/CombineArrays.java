@@ -1,4 +1,4 @@
-
+import java.util.Arrays;
 public class CombineArrays {
     /**
      * Combine two arrays into a single array and return it.
@@ -9,6 +9,20 @@ public class CombineArrays {
      */
     public int[] combine(int[] arr1, int[] arr2){
 
-        return null;
+        int firstArray = arr1.length;
+        int secondArray = arr2.length;
+        int[] result = new int[firstArray+secondArray];
+
+        //Using to arraycopy method
+
+        System.arraycopy(arr1, 0, result, 0, firstArray);
+        System.arraycopy(arr2, 0, result, firstArray, secondArray);
+
+
+        System.out.println(Arrays.toString(result));
+       
+
+
+        return result;
     }
 }
